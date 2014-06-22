@@ -1,313 +1,74 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312"><title>Github for Windows使用图文教程_西西软件资讯</title><meta name="keywords" content="Github"><meta name="description" content="Github for Windows使用图文教程"><link href="/skin/main.css" rel="stylesheet" type="text/css"><link href="/skin/cms.css" rel="stylesheet" type="text/css"><link href="/skin/gr/pub.css" rel="stylesheet" type="text/css"><script src="//hm.baidu.com/hm.js?e32b0486ce2e2f6870da86b348af9816"></script><script type="text/javascript" src="/inc/jquery-1.4.2.min.js"></script><script type="text/javascript" src="/inc/function.js"></script><script type="text/javascript" src="/inc/173.js"></script>
-<script src="http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=389850"></script><link href="http://bdimg.share.baidu.com/static/css/bdsstyle.css?cdnversion=20131219" rel="stylesheet" type="text/css"></head>
-<body ryt13537="1"><div id="BAIDU_DUP_fp_wrapper" style="position: absolute; left: -1px; bottom: -1px; z-index: 0; width: 0px; height: 0px; overflow: hidden; visibility: hidden; display: none;"><iframe id="BAIDU_DUP_fp_iframe" src="http://pos.baidu.com/wh/o.htm?ltr=http%3A%2F%2Fwww.baidu.com%2Fs%3Fwd%3DGitHub&amp;cf=u" style="width: 0px; height: 0px; visibility: hidden; display: none;"></iframe></div><iframe frameborder="0" style="display: none;"></iframe><div id="bdshare_s" style="display: block;"><iframe id="bdsIfr" style="position:absolute;display:none;z-index:9999;" frameborder="0"></iframe><div id="bdshare_l" style="display: none;"><div id="bdshare_l_c"><h6>分享到</h6><ul><li><a href="#" class="bds_mshare mshare">一键分享</a></li><li><a href="#" class="bds_qzone qqkj">QQ空间</a></li><li><a href="#" class="bds_tsina xlwb">新浪微博</a></li><li><a href="#" class="bds_bdysc bdysc">百度云收藏</a></li><li><a href="#" class="bds_renren rrw">人人网</a></li><li><a href="#" class="bds_tqq txwb">腾讯微博</a></li><li><a href="#" class="bds_bdxc bdxc">百度相册</a></li><li><a href="#" class="bds_kaixin001 kxw">开心网</a></li><li><a href="#" class="bds_tqf txpy">腾讯朋友</a></li><li><a href="#" class="bds_tieba bdtb">百度贴吧</a></li><li><a href="#" class="bds_douban db">豆瓣网</a></li><li><a href="#" class="bds_tsohu shwb">搜狐微博</a></li><li><a href="#" class="bds_bdhome bdhome">百度新首页</a></li><li><a href="#" class="bds_sqq sqq">QQ好友</a></li><li><a href="#" class="bds_thx thx">和讯微博</a></li><li><a href="#" class="bds_more">更多...</a></li></ul><p><a href="#" class="goWebsite">百度分享</a></p></div></div></div>
+<!DOCTYPE html>
+<html>
 
-<!--网站头部 Begin--> 
- <div id="head" class="else">
-  <div id="ListSpaces" style="left: 865px; top: 1259px; display: none;"><img src="/up/2011-7/2011726111127.jpg"></div><div id="top">
-    <b>
-    <em>西西软件下载</em>最安全的下载网站、值得信赖的软件下载站！</b>
-    <span>
-    <a class="item1" href="/new.html">论坛转帖</a>
-    <a href="/new/">最新更新</a>
-    <a href="/catalog.html">软件分类</a>
-    <a href="/top/">下载排行</a>
-    <a href="http://danji.cr173.com">单机游戏</a>
-    </span>
-  </div>
-  <div id="sitetop">
-    <div id="logo">
-      <a href="http://www.cr173.com/"><img border="0" align="middle" alt="西西软件" src="/skin/gr/images/cr173logo.gif"></a>
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Ouyangtianzuo.github.com : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Ouyangtianzuo.github.com</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ouyangtianzuo">View on GitHub</a>
+
+          <h1 id="project_title">Ouyangtianzuo.github.com</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
     </div>
-    <div id="search">
-      <div id="search_1">
-        <form name="topForm" id="topForm" method="get" action="/search.asp">
-          <div class="schsel">
-            <div class="schsel-now">
-            <span onmouseout="drop_mouseout('head');" onclick="show_search()" id="headSlected"> 文 章</span>
-              <b onmouseout="drop_mouseout('head');" onclick="show_search()"></b>
-            </div>
-            <div class="clear"></div>
-            <ul style="display:none;" id="headSel">
-              <li>
-                <a onmouseout="drop_mouseout('head');" onmouseover="drop_mouseover('head');" onclick="return search_show('head','youxi',this)" id="youxi" href="#"> 软 
 
-件</a>
-              </li>
-              <li>
-                <a onmouseout="drop_mouseout('head');" onmouseover="drop_mouseover('head');" onclick="return search_show('head','cms',this)" id="cms" href="#">文 章
-</a>
-              </li>
-            </ul>
-          </div>
-          <input type="text" class="keyword_input" id="keyword" name="keyword">
-          <input type="submit" class="schbtn" value="搜 索">
-          <input type="hidden" value="cms" id="searchType" name="searchType">
-          <input type="hidden" name="aq" value="" disabled="">
-          <input type="hidden" name="oq" value="" disabled="">
-        </form>
-        <div class="clear"></div>
-      </div>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="----welcome-to-github-pages" class="anchor" href="#----welcome-to-github-pages"><span class="octicon octicon-link"></span></a>## ### # ### Welcome to GitHub Pages.</h1>
 
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+
+<pre><code>$ cd your_repo_root/repo_name
+$ git fetch origin
+$ git checkout gh-pages
+</code></pre>
+
+<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+
+<h3>
+<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+
+<h3>
+<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we鈥檒l help you sort it out.</p>
+      </section>
     </div>
-    <div id="topad">
 
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
     </div>
-    <div class="clear"></div>
-  </div>
-  <div id="nav" style="height: 34px; border-bottom: 1px solid #45a333;">
-  <div class="new_channel2"></div>
-  
-    <ul>
 
-    <li> <a href="http://www.cr173.com/">西西首页</a> </li>
-    <li> <a href="/artlist/r_1_1.html">腾讯专区</a> </li>
-    <li> <a href="/artlist/r_2_1.html">新闻动态</a> </li>
-    <li> <a href="/artlist/r_3_1.html">游戏资讯</a> </li>
-    <li> <a href="/artlist/r_5_1.html">安全中心</a> </li>
-    <li> <a href="/artlist/r_6_1.html">公文办公</a> </li>
-    <li> <a href="/artlist/r_7_1.html">硬件IT</a> </li>
-    <li> <a href="/exam/r_8_1.html">认证考试</a> </li>
-    <li class="active"> <a href="/artlist/r_9_1.html">绿软学堂</a> </li>
-    <li> <a href="/artlist/r_10_1.html">编程开发</a> </li>
-    <li> <a href="/Guide/r_11_1.html">攻略秘籍</a> </li>
-    <li> <a class="new" href="/gonglue/r_12_1.html">安卓攻略</a> </li>
-    </ul>
-  </div>
-  
-</div>
-
-<!--网站头部 End-->
-
-<!--Style_Cms_Info.htm站点导航部分-->
-<script language="JavaScript">
-<!-- 
-function doZoom(size){
-	document.getElementById('content').style.fontSize=size+'pt'
-}
-// -->
-</script>
-
- <div id="nvbar"> <b>您的位置：</b><a href="/default_Cms.html">首页</a>  → <a href="/artlist/r_9_1.html">西西教程</a> → <a href="/artlist/s_60_1.html">软件使用 </a> → Github for Windows使用图文教程</div>
- <script type="text/javascript">activeMenu('nvbar',1)</script>
-
-<!--|||--><!--网页主要部分-->
-<div class="page_all" id="info_body">
-
-
-<!--左边 Begin-->
- <div id="cms_info_1"> 
-  <div id="cms_info_1_1">
-  <h1> Github for Windows使用图文教程 </h1>
-  <h2>  出处：<a href="http://www.cr173.com" target="_blank">西西整理</a> 作者：佚名  日期：2012/6/5 11:58:02  [<a href="javascript:doZoom(14)">大</a> <a href="javascript:doZoom(12)">中</a> <a href="javascript:doZoom(9)">小</a>]  评论:          <span>3</span> | <a href="#cms_show_ly" class="l01">我要发表看法</a>
-  </h2>
-  
-  <div id="cms_hot"> <script type="text/javascript" src="/show/cms_hot.js"></script><iframe src="http://www.5577.com/cmstop/show_1.html" width="550" height="95" marginheight="0" marginwidth="0" scrolling="no" frameborder="0"></iframe> </div>
-  
-   <div id="content">
-      
-   <p>Git已经变得非常流行，连Codeplex现在也已经主推Git。Github上更是充斥着各种高质量的开源项目，比如ruby&nbsp;on&nbsp;rails，cocos2d等等。</p><p>对于习惯Windows图形界面的程序员来讲，Github的使用是需要点时间和耐心的，然而最近Github发布了Github&nbsp;for&nbsp;Windows&nbsp;则大大降低了学习成本和使用难度，他甚至比SVN都简单，好吧，你不信，我们来一步一步过一面：</p><p>1.&nbsp;在<a href="http://www.cr173.com/soft/42550.html">http://www.cr173.com/soft/42550.html</a>下载Github&nbsp;for&nbsp;Windows，然后安装就不说了</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511590916628.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>2.&nbsp;登陆，安装好后打开GitHub，用你的GitHub账号登陆。需要注意的事，Github&nbsp;for&nbsp;Windows会帮你创建SSH&nbsp;Key，你打开邮件应该会收到邮件帮你创建SSH&nbsp;Key的信息，这也省了不少事：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591035036.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>3.&nbsp;创建一个仓库。点击上面的&nbsp;“<strong>+Add</strong>”&nbsp;按钮创建一个新的仓库，输入相关信息：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591096729.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>4.&nbsp;新建的仓库还没有真正地提交到本地仓库，相当于这只是一个new的修改，github简化了一些操作过程，对于任何修改，只需要添加评论就可以提交到本地仓库，然后这个时候才可以提交到远程仓库，所以我们来添加一条评论：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591068687.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>在每次添加一个评论之后，就相当于向本地仓库提交了一本版本，之后，就可以选择一个版本向远处仓库提交了。</p><p>5.&nbsp;这个时候我们就可以Publish一个仓库了，Publish之后按钮就变成in&nbsp;sync文字，表示以后的修改提交就是同步，这个时候你到你的github上看应该就会多一个仓库了：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591062815.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>6.&nbsp;添加项目，仓库在本地保存在一个文件夹中，Github&nbsp;for&nbsp;windows会监视这个文件夹，任何修改都会在仓库中看到，然后像上面一样添加评论就可以将修改提交到本地仓库，这里我们打开仓库目录，往里面添加一个项目：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511592225159.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591242704.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>5.&nbsp;将修改提交到本地仓库，回到Github&nbsp;for&nbsp;windows中，已经可以看到刚才添加的项目了，同样，提交注释提交到本地仓库：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591287309.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>6.&nbsp;最后，点击sync将本地仓库提交到github</p><p>7. 参与开源项目协同开发：</p><p>&nbsp;&nbsp;&nbsp; github现在已经深度支持Windows开发者了，现在每个在github的开源项目前面都有一个“Clone in Windows”的按钮，我们可以Clone任何我们感兴趣的开源项目，然后在地进行修改，参与开源项目的开发。</p><p>&nbsp;&nbsp;&nbsp; 点击该按钮之后，浏览器会要求打开Github for Windows，并下载项目至本地，新建一个本地仓库：</p><p style="text-indent: 0px;"><img alt="" src="/up/2012-6/2012060511591349367.png" title="点击查看大图" width="600" style="cursor: pointer;"></p><p>总结：github&nbsp;for&nbsp;Windows简化了一些概念和操作，并且几乎所有主要操作都通过图形界面来完成，基本上能完成日常写作了。这些主要的简化包括：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;将push到远程仓库简化为一个同步按钮</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;将提交到本地仓库简化为只需要对一些列修改添加评论</p><p>更多的，还包括分支的建立和管理，这部分自己去探索吧，总之，github for Windows确实是一个非常好的工具。</p>
-   </div>
-  	
-    <div id="share">    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>        <a class="bds_tqq" title="分享到腾讯微博" href="#"></a>        <a class="bds_renren" title="分享到人人网" href="#"></a>        <a class="bds_baidu" title="分享到百度搜藏" href="#"></a>        <span class="bds_more">更多</span>		<a class="shareCount" href="#" title="累计分享68次">68</a>    </div></div>
-  
-  <div id="cms_info_xiangua"><div style="clear:both;text-align:center"><iframe marginwidth="0" marginheight="0" frameborder="0" bordercolor="#000000" scrolling="no" src="/show/html/minjie_600.html" width="600" height="270"></iframe></div> <b> 相关阅读 </b>
-    <ul class="ul_4"> 
     
-     <li><span> 12-16</span>·<a href="/html/25087_1.html" class="lan">GitHub是什么？GitHub如何使用？</a></li><li><span> 02-02</span>·<a href="/html/3961_1.html" class="lan">IT技术人员的找工之路</a></li><li><span> 02-02</span>·<a href="/html/3958_1.html" class="lan">国外IT博客网页布局分析</a></li><li><span> 02-01</span>·<a href="/html/3942_1.html" class="lan">30个非常流行的提示信息插件（jQuery Tooltip Plugin）</a></li><li><span> 01-29</span>·<a href="/html/3936_1.html" class="lan">InfoPath进阶之二：给InfoPath添加VSTA托管代码并从SharePoint列</a></li><li><span> 01-29</span>·<a href="/html/3933_1.html" class="lan">美国人找工作，上Twitter</a></li><li><span> 01-27</span>·<a href="/html/3886_1.html" class="lan">Twitter与QQ注册用户数与市值比较</a></li><li><span> 01-22</span>·<a href="/exam/Cisco_3717_1.html" class="lan">Switch命令大全,Cisco资格认证考试要记住的</a></li><li><span> 01-21</span>·<a href="/html/3697_1.html" class="lan">气质动人的韩国绝色网游MM-SHOWGIRL，来自韩国神秘新游《NED》</a></li><li><span> 01-13</span>·<a href="/html/3607_1.html" class="lan">Unistal将推出BitDefender互联网安全2010，反病毒软件2010</a></li>
-     </ul>
-   
-  </div>
- </div>
- 
- 
- 
-  <!--显示心情列表-->
- <div id="ListMood">
-    <h3> 阅读本文后您有什么感想? 已有 
-   <label>132768</label> 
-   人给出评价!</h3>
-  <ul>
-  	<li><b>103733</b> <span> <img src="/skin/moon/array.gif" width="18" style="display: block; height: 78%;"></span> <em name="1" style="cursor: pointer;"><img src="/skin/moon/1.gif" width="100" height="100" alt="欢迎喜欢"></em> </li>
-    <li><b>2419</b> <span> <img src="/skin/moon/array.gif" width="18" style="display: block; height: 1%;"></span> <em name="2" style="cursor: pointer;"> <img src="/skin/moon/2.gif" width="100" height="100" alt="白痴"> </em></li>
-    <li><b>1726</b> <span> <img src="/skin/moon/array.gif" width="18" style="display: block; height: 1%;"> </span> <em name="3" style="cursor: pointer;"> <img src="/skin/moon/3.gif" width="100" height="100" alt="拜托"> </em></li>
-    <li><b>2423</b> <span> <img src="/skin/moon/array.gif" width="18" style="display: block; height: 1%;"></span> <em name="4" style="cursor: pointer;"> <img src="/skin/moon/7.gif" width="100" height="100" alt="哇"> </em></li>
-    <li><b>1541</b> <span> <img src="/skin/moon/array.gif" width="18" style="display: block; height: 1%;"></span> <em name="5" style="cursor: pointer;"> <img src="/skin/moon/8.gif" width="100" height="100" alt="加油"> </em></li>
-     <li><b>20926</b> <span> <img src="/skin/moon/array.gif" width="18" style="display: block; height: 15%;"></span> <em name="6" style="cursor: pointer;"> <img src="/skin/moon/9.gif" width="100" height="100" alt="鄙视"> </em></li>
-  </ul>
- </div>
- 
- 
-  <!--留言专用 Begin -->
-   <div id="cms_show_ly">
-    
-<div id="comment_list">
-  <div id="comment_0">
-    <h2><span>热门评论</span></h2>
-    <dl>
-      
-    </dl>
-  </div>
-  
-  
-  <div id="comment_1">
-    <h2><span>最新评论</span></h2>
-    <dl>
-      <dt><span><i>第  3 楼 </i><b> 山西太原金玉网吧(山西大学商务学院) 网友 客人</b> </span><em>发表于: 2014/3/27 15:46:39  </em></dt>
-<dd><img src="http://www.cr173.com/skin/fac/6.gif">不错不错 <p id="572657"><a href="javascript:">支持(<span> 0 </span>)</a> <a href="javascript:" onclick="document.getElementById('zt_ly').ly_content.focus(); document.getElementById('zt_ly').ly_content.value='[quote]572657[/quote]'; return false;">[引用回复]</a> </p> </dd>
-<dt><span><i>第  2 楼 </i><b> 广东广州番禺电信 网友 客人</b> </span><em>发表于: 2014/2/20 23:49:51  </em></dt>
-<dd>非常简洁有用，感谢作者 <p id="538440"><a href="javascript:">支持(<span> 0 </span>)</a> <a href="javascript:" onclick="document.getElementById('zt_ly').ly_content.focus(); document.getElementById('zt_ly').ly_content.value='[quote]538440[/quote]'; return false;">[引用回复]</a> </p> </dd>
-<dt><span><i>第  1 楼 </i><b> 湖北电信 网友 客人</b> </span><em>发表于: 2013/11/12 15:37:02  </em></dt>
-<dd>用了一下，的确非常不错。<img src="http://www.cr173.com/skin/fac/6.gif"> <p id="440751"><a href="javascript:">支持(<span> 0 </span>)</a> <a href="javascript:" onclick="document.getElementById('zt_ly').ly_content.focus(); document.getElementById('zt_ly').ly_content.value='[quote]440751[/quote]'; return false;">[引用回复]</a> </p> </dd>
 
-    </dl>
-  
-  </div>
-  
-  <div id="s_comment">
-    <form action="" id="zt_ly" onkeydown="submitForm()">
-      <h2><span>发表评论</span> <a href="http://www.cr173.com/comment_15618_1.html">查看所有评论(<i>3</i>)</a></h2>
-      
-      <div class="nick_name"><b>昵称: </b>
-        <input name="UserName" type="text" id="UserName" value="西西网友">
-        <input name="ly_id" type="hidden" id="ly_id" value="15618">
-        <input name="CommentTpye" type="hidden" id="ztid" value="1">
-      </div>
-      <div class="comment_faces">
-      <b>表情:</b> 
-       <img src="/skin/fac/1.gif" alt="高兴" width="24" height="24" onclick="insFace(1,'ly_content')">
-       <img src="/skin/fac/2.gif" alt="可" width="24" height="24" onclick="insFace(2,'ly_content')">
-       <img src="/skin/fac/3.gif" alt="汗" width="24" height="24" onclick="insFace(3,'ly_content')">
-       <img src="/skin/fac/4.gif" alt="我不要" width="24" height="24" onclick="insFace(4,'ly_content')">
-       <img src="/skin/fac/5.gif" alt="害羞" width="24" height="24" onclick="insFace(5,'ly_content')">
-       <img src="/skin/fac/6.gif" alt="好" width="24" height="24" onclick="insFace(6,'ly_content')">
-       <img src="/skin/fac/7.gif" alt="下下下" width="24" height="24" onclick="insFace(7,'ly_content')">
-       <img src="/skin/fac/8.gif" alt="送花" width="24" height="24" onclick="insFace(8,'ly_content')">
-       <img src="/skin/fac/9.gif" alt="屎" width="24" height="24" onclick="insFace(9,'ly_content')">
-       <img src="/skin/fac/10.gif" alt="亲亲" width="24" height="24" onclick="insFace(10,'ly_content')">
-       </div>
-      <textarea name="ly_content" onkeyup="countLyNum(this,'ly_num')" id="ly_content"></textarea>
-      <div class="comment_btn">
-      <span class="word_count">字数: <b id="ly_num">0</b>/500</span>
-      <input type="button" value=" 发表评论 " onclick="submitComment()">(您的评论需要经过审核才能显示)
-      </div>
-    </form>
-  </div>
-</div>
-
-   </div>
- <!--留言专用 End -->
-  
-  
-  
- 
- 
- <!--第二行 End--> 
- 
-</div>
-<!--左边 End--> 
-
-
-<!--右边 Begin-->
- <div id="cms_info_2"> 
-  
-  <!--第一个-->
-  <div class="bluetab1" id="cms_info_2_1">
-   <div class="bluetab1_left"></div>
-   <h2>视觉焦点</h2>
-    <div class="bluetab1_foot">
-       <ul class="ul_img_120_90">
-           <li><a href="/html/25596_1.html" title="叉叉助手ios安装教程 叉叉游戏助手ios怎么用"><img src="/up/2013-12/20131227212927.png" border="0"></a> <a href="/html/25596_1.html">叉叉助手ios安装教程 叉叉游戏助</a></li> <li><a href="/html/19974_1.html" title="暴风影音截图保存在哪、截取视频问题解答"><img src="/up/2014-2/2014225171030.png" border="0"></a> <a href="/html/19974_1.html">暴风影音截图保存在哪、截取视频</a></li> <li><a href="/html/11949_1.html" title="SQL Server 2000 Personal 中文版详细安装教程"><img src="/up/2010-1/201011815201.png" border="0"></a> <a href="/html/11949_1.html">SQL Server 2000 Personal 中文版</a></li> <li><a href="/html/11735_1.html" title="使用飞速土豆导出保存缓存中的视频"><img src="/up/2011-5/2011512135621.jpg" border="0"></a> <a href="/html/11735_1.html">使用飞速土豆导出保存缓存中的视</a></li> <li><a href="/html/7011_1.html" title="itudou(爱土豆)下载土豆网上的视频、上传视频以及视频格式转换"><img src="/up/2010-9/2010917164818.jpg" border="0"></a> <a href="/html/7011_1.html">itudou(爱土豆)下载土豆网上的视</a></li> <li><a href="/html/5561_1.html" title="Free FLV to MP3 Converter使用说明"><img src="/up/2010-7/20107239554.gif" border="0"></a> <a href="/html/5561_1.html">Free FLV to MP3 Converter使用说</a></li>
-       </ul>
-    </div>
-  </div>
-  
-    <!--第二个-->
-  <div class="bluetab1" id="cms_info_2_2">
-   <div class="bluetab1_left"></div>
-   <h2>访问量多的</h2>
-    <div class="bluetab1_foot">
-       <ul class="ul_3">
-         <li> <a href="/html/7495_1.html" title="Visual Foxpro 6.0 中文版安装向导图文示例介绍">Visual Foxpro 6.0 中文版安装向导图文示例</a>
-</li>
-<li> <a href="/html/11904_1.html" title="Adobe photoshop CS5中文版安装教程图文并茂">Adobe photoshop CS5中文版安装教程图文并茂</a>
-</li>
-<li> <a href="/html/5194_1.html" title="SolidWorks2010中文版安装方法过程图解">SolidWorks2010中文版安装方法过程图解</a>
-</li>
-<li> <a href="/html/12297_1.html" title="CE游戏修改器制作游戏修改器傻瓜教程">CE游戏修改器制作游戏修改器傻瓜教程</a>
-</li>
-<li> <a href="/html/11368_1.html" title="康福中国Camfrog6.0 英文版变成中文版安装教程">康福中国Camfrog6.0 英文版变成中文版安装教</a>
-</li>
-<li> <a href="/html/10843_1.html" title="电子书万能转换器使用教程">电子书万能转换器使用教程</a>
-</li>
-<li> <a href="/html/11890_1.html" title="Adobe Dreamweaver CS5中文版安装向导图文示例介绍">Adobe Dreamweaver CS5中文版安装向导图文示</a>
-</li>
-<li> <a href="/html/11534_1.html" title="nero8 CD光盘刻录、DVD刻录使用教程">nero8 CD光盘刻录、DVD刻录使用教程</a>
-</li>
-<li> <a href="/html/7452_1.html" title="win7系统C盘分区工具Acronis Disk Director Suite 10.0图文教程">win7系统C盘分区工具Acronis Disk Director</a>
-</li>
-<li> <a href="/html/10986_1.html" title="winrar 注册码 winrar4.0无限制正版注册码">winrar 注册码 winrar4.0无限制正版注册码</a>
-</li>
-<li> <a href="/html/12238_1.html" title="CorelDRAW X5 中文正式版注册破解详细图文教程">CorelDRAW X5 中文正式版注册破解详细图文教</a>
-</li>
-
-       </ul>
-    </div>
-  </div>
-  
-  
-    <!--第三个-->
-  <div class="bluetab1" id="cms_info_2_3">
-   <div class="bluetab1_left"></div>
-   <h2> 相关软件</h2>
-    <div class="bluetab1_foot">
-      <ul class="ul_comm_soft">
- 
-         <li><a href="/soft/42550.html"><img src="/up/2012-5/20125229169.jpg" onmouseover="setShowSpace(this,'/up/2012-5/201252291314.jpg')"></a><b><a href="/soft/42550.html">版本控制工具(GitHub)</a> </b>知名的协作开发工具Gi</li>  <li><a href="/soft/34544.html"><img src="/up/2011-10/20111019102233.jpg" onmouseover="setShowSpace(this,'/up/2011-10/20111019102258.gif')"></a><b><a href="/soft/34544.html">(常春藤模型生成插件)Guruware Ivy 0.92b for 3ds Max7~2010  32bit</a> </b>常春藤生成插件，3ds </li>  <li><a href="/soft/17270.html"><img src="/up/2010-10/20101021145241.png" onmouseover="setShowSpace(this,'/skin/logo.gif')"></a><b><a href="/soft/17270.html">.NET Compact Framework 3.5 for 魅族M8</a> </b>.NETCF v35（不要解压</li>  <li><a href="/soft/52056.html"><img src="/skin/img/1.jpg" onmouseover="setShowSpace(this,'/up/2012-12/2012122102850.jpg')"></a><b><a href="/soft/52056.html">.NET Micro Framework 4.0 Porting Kit</a> </b>公开版本的PortingKit</li>  <li><a href="/soft/62144.html"><img src="/up/2013-5/2013523141458.jpg" onmouseover="setShowSpace(this,'/up/2013-5/201352314620.png')"></a><b><a href="/soft/62144.html">.NET2资源汉化工具(LocalizeUtility)</a> </b>.NET 2.0资源汉化工具</li>  <li><a href="/soft/30461.html"><img src="/up/2011-7/2011726111323.jpg" onmouseover="setShowSpace(this,'/up/2011-7/2011726111127.jpg')"></a><b><a href="/soft/30461.html">.Net编程自动调试监视工具(Auto Debug For .Net)</a> </b>一个视窗系统下的&amp;nbs</li>  <li><a href="/soft/50756.html"><img src="/up/2012-11/2012112235352.jpg" onmouseover="setShowSpace(this,'/up/2012-11/2012110223442237315.png')"></a><b><a href="/soft/50756.html">.net程序内存监测分配工具(CLR Profiler for .NET Framework 4)</a> </b>CLR Profiler 是用来观</li>  <li><a href="/soft/44797.html"><img src="/up/2012-6/2012630201137.jpg" onmouseover="setShowSpace(this,'/up/2012-6/2012630201126.jpg')"></a><b><a href="/soft/44797.html">.NET单元测试框架(NUnit)</a> </b>NUnit是一个单元测试框</li>  <li><a href="/soft/62029.html"><img src="/up/2013-5/2013522114014.jpg" onmouseover="setShowSpace(this,'/up/2013-5/201352213478.png')"></a><b><a href="/soft/62029.html">.NET平台反编译工具(Dotnet IL Editor)</a> </b>Dotnet IL Editor是一</li>  <li><a href="/soft/22979.html"><img src="/skin/img/chm.jpg" onmouseover="setShowSpace(this,'/up/2011-2/2011224153310.jpg')"></a><b><a href="/soft/22979.html">《ArcGIS API for Android 案例教程》</a> </b>&nbsp;目录 I. 配置开</li> 
-        
-
-      </ul>  
-    </div>
-  </div>
-   
- </div>
-<!--右边 End-->
-
-
-<div class="clear"></div>
-
-
-<script type="text/javascript">
-   SetMoon(15618,'ListMood'); //心情
-   ViewCmsImages("content",15618);
-   img_maxwidth('content',600)
-   var PageClass=10;
-</script>
-</div>
-
-<!--网站底部 Begin-->
-  <div id="image-preview" style="display: none;"></div><div id="foot">
-   <div class="page_all">
-    <p> <span style="float:right; padding-right:20px;"><a href="#top" target="_self"><img src="/skin/img/top.jpg" alt="返回顶部" width="32" height="18" border="0"></a> </span> <span onclick="address('http://www.cr173.com/','绿色下载')" style="cursor: pointer;">收藏本站</span> | <a href="/contact.html">联系我们</a> | <a href="/Develop.html">发展历程</a> | <a href="/copyright.html">版权声明</a> | <a href="/help.html" style="cursor:help">下载帮助(？)</a> | <a href="/ad.html">广告服务</a> | <a href="/public.html">软件提交</a> | <a href="/Feedback.html">意见反馈</a></p>
-    <p>  声明：西西软件园为非赢利性网站 不接受任何赞助和广告 鄂ICP备07011518号 
-      <script language="JavaScript" type="text/javascript" src="/show/count.js"></script>
-   </p>
-    </div>
-  </div>
- <!--网站底部 End-->
- 
-
-
-
-
-<script language="JavaScript" type="text/javascript" src="/show/All.js"></script><script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1270858_0"></div><div id="cproIframe2002holder" style="padding: 0px; display: block; visibility: visible; border: none; float: none; overflow: hidden; position: fixed; z-index: 2147483646; width: 130px; height: 360px; right: 54px; top: -18px; background: none;"><div id="cproIframe2002CloseBtnWrap" style="position: absolute; top: 275px; left: 0px; cursor: pointer; width: 130px; height: 28px; z-index: 100; opacity: 0; background-color: rgb(153, 153, 153);"></div><div id="cproIframe2002CloseBtn" style="position: absolute; width: 130px; height: 20px; top: 280px; left: 0px; cursor: pointer; color: rgb(255, 255, 255); font-size: 12px; font-family: 微软雅黑; text-align: center; line-height: 20px; background-color: rgb(153, 153, 153);">关闭</div><div style="width: 130px; height: 360px; overflow: hidden;"><div style="display:none">-</div><iframe id="cproIframe2002" src="http://pos.baidu.com/ecom?cec=GBK&amp;ccw=960&amp;dai=1&amp;cfv=14&amp;cpa=1&amp;col=zh-CN&amp;dis=0&amp;xuanting=0&amp;n=86077058_cpr&amp;conOP=0&amp;flw=1&amp;scale=&amp;skin=&amp;rsi0=120&amp;rsi1=270&amp;rsi5=4&amp;rsi6=-1&amp;rsi7=0&amp;ltr=http%3A%2F%2Fwww.baidu.com%2Fs%3Fwd%3DGitHub&amp;ltu=http%3A%2F%2Fwww.cr173.com%2Fhtml%2F15618_1.html&amp;pcs=1349x642&amp;rss0=&amp;rss1=&amp;rss2=&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=&amp;rss7=&amp;rad=&amp;pis=10000x10000&amp;aurl=&amp;psr=1366x768&amp;pss=1349x6857&amp;tpr=1403457045560&amp;lunum=6&amp;ch=0&amp;at=6&amp;fa=1&amp;ct=2&amp;ls=3&amp;qn=99b5c04309dc0b0e&amp;ps=6857x0&amp;pt=1&amp;tn=template_float_all_normal&amp;ts=1&amp;ww=0&amp;td_id=1270858&amp;adn=1&amp;cad=1&amp;ccd=24&amp;stid=2&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dc=2&amp;di=u1270858&amp;distp=2002&amp;adclass=1&amp;conW=130&amp;conH=360" width="130" height="360" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div></div><div id="cproIframe2001holder" style="padding: 0px; display: block; visibility: visible; border: none; float: none; overflow: hidden; position: fixed; z-index: 2147483646; width: 130px; height: 360px; left: 54px; top: -18px; background: none;"><div id="cproIframe2001CloseBtnWrap" style="position: absolute; top: 275px; left: 0px; cursor: pointer; width: 130px; height: 28px; z-index: 100; opacity: 0; background-color: rgb(153, 153, 153);"></div><div id="cproIframe2001CloseBtn" style="position: absolute; width: 130px; height: 20px; top: 280px; left: 0px; cursor: pointer; color: rgb(255, 255, 255); font-size: 12px; font-family: 微软雅黑; text-align: center; line-height: 20px; background-color: rgb(153, 153, 153);">关闭</div><div style="width: 130px; height: 360px; overflow: hidden;"><div style="display:none">-</div><iframe id="cproIframe2001" src="http://pos.baidu.com/ecom?cec=GBK&amp;ccw=960&amp;dai=1&amp;cfv=14&amp;cpa=1&amp;col=zh-CN&amp;dis=0&amp;xuanting=0&amp;n=86077058_cpr&amp;conOP=0&amp;flw=1&amp;scale=&amp;skin=&amp;rsi0=120&amp;rsi1=270&amp;rsi5=4&amp;rsi6=-1&amp;rsi7=0&amp;ltr=http%3A%2F%2Fwww.baidu.com%2Fs%3Fwd%3DGitHub&amp;ltu=http%3A%2F%2Fwww.cr173.com%2Fhtml%2F15618_1.html&amp;pcs=1349x642&amp;rss0=&amp;rss1=&amp;rss2=&amp;rss3=&amp;rss4=&amp;rss5=&amp;rss6=&amp;rss7=&amp;rad=&amp;pis=10000x10000&amp;aurl=&amp;psr=1366x768&amp;pss=1349x6857&amp;tpr=1403457045560&amp;lunum=6&amp;ch=0&amp;at=6&amp;fa=1&amp;ct=2&amp;ls=3&amp;qn=99b5c04309dc0b0e&amp;ps=6857x0&amp;pt=1&amp;tn=template_float_all_normal&amp;ts=1&amp;ww=0&amp;td_id=1270858&amp;adn=1&amp;cad=1&amp;ccd=24&amp;stid=2&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dc=2&amp;di=u1270858&amp;distp=2001&amp;adclass=1&amp;conW=130&amp;conH=360" width="130" height="360" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div></div><script charset="utf-8" src="http://pos.baidu.com/ecom?di=u1270858&amp;dcb=BAIDU_DUP2_define&amp;dtm=BAIDU_DUP2_SETJSONADSLOT&amp;dbv=2&amp;dci=0&amp;dri=0&amp;dis=0&amp;dai=1&amp;dds=&amp;drs=1&amp;dvi=1401358918&amp;ltu=http%3A%2F%2Fwww.cr173.com%2Fhtml%2F15618_1.html&amp;liu=&amp;ltr=http%3A%2F%2Fwww.baidu.com%2Fs%3Fwd%3DGitHub&amp;lcr=http%3A%2F%2Fwww.baidu.com%2Fs%3Fwd%3DGitHub&amp;ps=6857x0&amp;psr=1366x768&amp;par=1366x728&amp;pcs=1349x642&amp;pss=1349x6857&amp;pis=-1x-1&amp;cfv=14&amp;ccd=24&amp;chi=1&amp;cja=true&amp;cpl=27&amp;cmi=40&amp;cce=true&amp;col=zh-CN&amp;cec=GBK&amp;cdo=-1&amp;tsr=13&amp;tlm=1396981035&amp;tcn=1403457046&amp;tpr=1403457045560&amp;dpt=none&amp;coa=&amp;baidu_id="></script>
-
-
-<script type="text/javascript" src="../skin/share.js"></script><script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=361342" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=389850"></script>
-
-<script type="text/javascript">
-	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
-</script>
-
-
-</body></html>
+  </body>
+</html>
