@@ -1,4 +1,4 @@
-1f54
+﻿1f54
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,7 @@
 		var G_cs_jmp_bg ='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp_bg.jpg';
 		var G_cs_jmp_png='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp.png?key=143';
 		var G_score='4500';
-		var isGameOver=false;
+		var isGameOver=true;
 		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 			WeixinJSBridge.call('showOptionMenu');
 		});
@@ -30,7 +30,7 @@
 	
 </head>
 <body onorientationchange="rtalt()" style="-webkit-transform-origin: 0px 0px 0px;">
-	<!-- ΢���û�id -->
+	<!-- 微信用户id -->
 	<input type="hidden" id="wxId" value="">
 	<div id="chf2" style="position:relative;width:100%;height:100%;overflow:hidden;">
 		<canvas id="gcvs" width="100%" height="100%"></canvas>
@@ -41,30 +41,30 @@
 	<script src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/js/gamePlay.js"></script>
 	<div id="scoreDiv" class="scoreDiv"></div>
 	<div id="infoDiv" class="infoDiv">
-		<p id="bbnum">�������ȫ��<span >0%</span>���û�</p>
-		<!-- <p id="distance" >�����ʵ绹��<span >300��</span></p> -->
+		<p id="bbnum">你击败了全国<span >0%</span>的用户</p>
+		<!-- <p id="distance" >距离大彩电还有<span >300米</span></p> -->
 		
-		<p><a style="text-decoration: none;" href="" ><p>��ϲ����<font style='color:red'>30Ԫ�����ʵ����ȯ</font></p><p><font style='color:black'>���ڻ����ṩ����֧��</font></p></a></p>
+		<p><a style="text-decoration: none;" href="" ><p>恭喜你获得<font style='color:red'>30元苏宁彩电抵用券</font></p><p><font style='color:black'>联众互动提供技术支持</font></p></a></p>
 			
 		
 	</div>
 	<div id="maskDiv" class="maskDiv" style="display:none;">
-		<!-- ��Ϸ���� -->
+		<!-- 游戏规则 -->
 		<div id="gameRuleDiv" class="gameRuleDiv" style="display:none;">
 			<div class="contentDiv">
 				<div id="moveP" style="margin-top:0px;overflow: auto;">
-				<div><p style='margin-top:0px;'>��Ʒ���ã�        </p><p>һ�Ƚ�������65Ӣ������UHD����3D����UA65HU8800  1̨        </p>             <p>���Ƚ�������60Ӣ����ɫ����3D����60LX960A  1̨        </p>          <p>���Ƚ����ȷ�58Ӣ��4K����������3D����58U600D  1̨       </p>                 <p>���뽱����ֵ30Ԫ�������ʵ�ȯ                  </p>        <br />               <p style='margin-top:0px;'>���֪��        </p>        <p>1�����ǲ�����Ϸ���û����������30Ԫ�����ʵ��Ż�ȯ����ҽ���Ϸ�÷ַ���������Ȧ�󣬿�ƾ������¼��2014��8��29��-31���ڼ䵽����ȫ�����ŵ���¼�����׹���վʹ�á�ע����½�����׹�����30Ԫȯ�ţ�02041020829 ����ڼ�һ���˻���ʹ��һ��30Ԫ�ʵ�ȯ���޹���Ӫ��Ʒ���ؼۡ����š���ۻݡ�������Ʒ���μӣ������������Ż�ͬʱ�μӡ� ��        </p>              <p>2��2014��8��31��24��֮ǰ����ҽ���Ϸ�÷ַ���������Ȧ�ڣ�ϵͳ����¼��ҵ÷������а����а�ǰ�������û����ֱ���һ�����Ƚ������÷���ͬ����ϵͳ�з���ʱ�俿ǰ�����򣩡����ջ����������������̲ʵ�Ӱ���ٷ�΢�ţ�SNYGCDYY�����й�ʾ��       </p>        <br /><center><span style='color:black;'>���ڻ����ṩ����֧��</span></center>    </div>				
+				<div><p style='margin-top:0px;'>奖品设置：        </p><p>一等奖：三星65英寸曲面UHD智能3D电视UA65HU8800  1台        </p>             <p>二等奖：夏普60英寸四色智能3D电视60LX960A  1台        </p>          <p>三等奖：先锋58英寸4K超高清智能3D电视58U600D  1台       </p>                 <p>参与奖：价值30元的苏宁彩电券                  </p>        <br />               <p style='margin-top:0px;'>活动须知：        </p>        <p>1、凡是参与游戏的用户，都将获得30元苏宁彩电优惠券，玩家将游戏得分分享至朋友圈后，可凭分享记录在2014年8月29日-31日期间到苏宁全国各门店或登录苏宁易购网站使用【注：登陆苏宁易购输入30元券号（02041020829 ）活动期间一个账户限使用一张30元彩电券，限购自营商品（特价、抢团、大聚惠、闪拍商品不参加），可与其他优惠同时参加】 。        </p>              <p>2、2014年8月31日24点之前，玩家将游戏得分分享至朋友圈内，系统将记录玩家得分至排行榜。排行榜前三名的用户将分别获得一二三等奖（若得分相同，按系统中分享时间靠前的排序）。最终获奖名单将在苏宁云商彩电影音官方微信（SNYGCDYY）进行公示。       </p>        <br /><center><span style='color:black;'>联众互动提供技术支持</span></center>    </div>				
 				</div>
 			</div>
 		</div>
 		<a id="closeBtn" class="closeBtn">
 			<img src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/icon-close.png">
 		</a>
-		<!-- ���� -->
+		<!-- 分享 -->
 		<div id="shareDiv" class="shareDiv" style="display:none;">
 			<img src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.png">
 		</div>
-		<!-- ���а� -->
+		<!-- 排行榜 -->
 		<div id="chartsDiv" class="chartsDiv" style="display:none;">
 			<div class="items">
 				<div id="moveDiv" class="moveDiv" style="margin-top:0px;">
@@ -97,9 +97,10 @@
 		});
 	}
 
-	//��ȡ�н���Ϣ
+	//获取中奖信息
 	function getInfoDivFun(scr_m){
-		G_score=scr_m;
+		G_score=10*scr_m;
+		scr_m=G_score;
 		if(isGameOver){
 			 $.post( 'http://ddd.i-lz.cn/jkUEs4K2ThkZoNjI/game/score',{score:scr_m},function(msg){
 				 	if(msg.bai){
@@ -109,7 +110,7 @@
 					 	
 					 }
 					$('#distance').show();
-					$('#distance span').text(msg.lmi+'��');
+					$('#distance span').text(msg.lmi+'米');
 						
 	    	   },
 	           "json"
@@ -120,7 +121,7 @@
 		
 	}
 
-	//���а�fun
+	//排行榜fun
 	function showChartsFun(){
 		if(!queryCountdown){
 			queryCountdown = true;
@@ -141,28 +142,28 @@
 			showChartsDiv();
 		}
 	}
-	//��߷ָ���fun
+	//最高分更新fun
 	function saveBastHeightFun(bastHeigth){
 		
 		
 		
 	}
 	var dataForWeixin = {
-            appId: "",//΢�Ź��ں�ID
-            MsgImg: 'http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.jpg', //���������Ѻ��ղ�ʱ��ʾ������ͼ       
-            TLImg: 'http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.jpg', //����������Ȧʱ��ʾ������ͼ
-            url: "http://ddd.i-lz.cn/jkUEs4K2ThkZoNjI/game/index",//������ַ
-            title:'̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~', //������΢��������Ȧ�����Ѷ����õ�
-            desc: '̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~', //������ ����ʱ���õ�
+            appId: "",//微信公众号ID
+            MsgImg: 'http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.jpg', //分享给朋友和收藏时显示的缩略图       
+            TLImg: 'http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.jpg', //分享到朋友圈时显示的缩略图
+            url: "http://ddd.i-lz.cn/jkUEs4K2ThkZoNjI/game/index",//分享地址
+            title:'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~', //分享至微博、朋友圈、朋友都会用到
+            desc: '太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~', //分享给 朋友时会用到
             fakeid: "",
             callback: function () {
-               // alert("�����ɹ���");
+               // alert("分享成功！");
             }
         }; 
         
                    
                var onBridgeReady=function(){           
-               //���������� 
+               //分享给朋友 
                WeixinJSBridge.on('menu:share:appmessage', function(argv){            
                   WeixinJSBridge.invoke('sendAppMessage',{            
                      "appid":dataForWeixin.appId,            
@@ -170,13 +171,13 @@
                      "img_width":"120",            
                      "img_height":"120",            
                      "link":dataForWeixin.url,            
-                     "desc":'̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~',            
-                     "title":'̫�ӵ��ˣ�������'+
+                     "desc":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~',            
+                     "title":'太坑爹了，才跳了'+
 aff
-G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~'            
+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~'            
                   }, function(res){(dataForWeixin.callback)();});            
                });    
-               //����������Ȧ        
+               //分享至朋友圈        
                WeixinJSBridge.on('menu:share:timeline', function(argv){            
                   (dataForWeixin.callback)();            
                   WeixinJSBridge.invoke('shareTimeline',{            
@@ -184,18 +185,18 @@ G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~'
                      "img_width":"120",            
                      "img_height":"120",            
                      "link":dataForWeixin.url,            
-                     "desc":'̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~',            
-                     "title":'̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~'            
+                     "desc":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~',            
+                     "title":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~'            
                   }, function(res){});            
                });       
-               //������΢��     
+               //分享至微薄     
                WeixinJSBridge.on('menu:share:weibo', function(argv){            
                   WeixinJSBridge.invoke('shareWeibo',{            
-                     "content":'̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~',            
+                     "content":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~',            
                      "url":dataForWeixin.url            
                   }, function(res){(dataForWeixin.callback)();});            
                });      
-               //������facebook      
+               //分享到facebook      
                WeixinJSBridge.on('menu:share:facebook', function(argv){            
                   (dataForWeixin.callback)();            
                   WeixinJSBridge.invoke('shareFB',{            
@@ -204,7 +205,7 @@ G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~'
                      "img_height":"120",            
                      "link":dataForWeixin.url,            
                      "desc":dataForWeixin.desc,            
-                     "title":'̫�ӵ��ˣ�������'+G_score+'�ף���һ��͵õ��ʵ���ˣ�С����Ƕ������԰�~'            
+                     "title":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~'            
                   }, function(res){});            
                });            
             };            
