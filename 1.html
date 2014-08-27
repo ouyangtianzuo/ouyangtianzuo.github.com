@@ -1,3 +1,19 @@
+<html>
+<head>
+	<script>
+		var G_title_jmp='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/title_jmp.png?k=153';
+		var G_cs_jmp ='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp.gif';
+		var G_cs_jmp_bg ='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp_bg.jpg';
+		var G_cs_jmp_png='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp.png?key=143';
+		var G_score='0';
+		var isGameOver=false;
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+			WeixinJSBridge.call('showOptionMenu');
+		});
+	</script>
+</head>
+<body>
+
 <script type="text/javascript">
 var G_score='4500';
 var dataForWeixin = {
@@ -35,3 +51,5 @@ WeixinJSBridge.on('menu:share:timeline', function(argv){
  };   
 
 	</script>
+</body>
+</html>
