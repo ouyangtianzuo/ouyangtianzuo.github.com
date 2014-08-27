@@ -1,0 +1,226 @@
+1f54
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta charset="utf-8">
+	<meta name="viewport" id="viewport" content="width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta equiv="Expires" content="0">
+	<title>You jump,I jump</title>
+	<link rel="stylesheet" type="text/css" href="http://ddd.i-lz.cn/addons/ddd/themes/defualt/css/index.css?key=143">
+	<link rel="stylesheet" type="text/css" href="http://ddd.i-lz.cn/addons/ddd/themes/defualt/css/mask.css">
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=36719137" charset="UTF-8"></script>
+	<script>
+		var G_title_jmp='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/title_jmp.png?k=153';
+		var G_cs_jmp ='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp.gif';
+		var G_cs_jmp_bg ='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp_bg.jpg';
+		var G_cs_jmp_png='http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/cs_jmp.png?key=143';
+		var G_score='4500';
+		var isGameOver=false;
+		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+			WeixinJSBridge.call('showOptionMenu');
+		});
+	</script>
+	
+</head>
+<body onorientationchange="rtalt()" style="-webkit-transform-origin: 0px 0px 0px;">
+	<!-- 微信用户id -->
+	<input type="hidden" id="wxId" value="">
+	<div id="chf2" style="position:relative;width:100%;height:100%;overflow:hidden;">
+		<canvas id="gcvs" width="100%" height="100%"></canvas>
+	</div>
+	<script src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/js/zepto.min.js"></script>
+	<script src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/js/zepto.animate.js"></script>
+	<script src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/js/game.js?key=143"></script>
+	<script src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/js/gamePlay.js"></script>
+	<div id="scoreDiv" class="scoreDiv"></div>
+	<div id="infoDiv" class="infoDiv">
+		<p id="bbnum">你击败了全国<span >0%</span>的用户</p>
+		<!-- <p id="distance" >距离大彩电还有<span >300米</span></p> -->
+		
+		<p><a style="text-decoration: none;" href="" ><p>恭喜你获得<font style='color:red'>30元苏宁彩电抵用券</font></p><p><font style='color:black'>联众互动提供技术支持</font></p></a></p>
+			
+		
+	</div>
+	<div id="maskDiv" class="maskDiv" style="display:none;">
+		<!-- 游戏规则 -->
+		<div id="gameRuleDiv" class="gameRuleDiv" style="display:none;">
+			<div class="contentDiv">
+				<div id="moveP" style="margin-top:0px;overflow: auto;">
+				<div><p style='margin-top:0px;'>奖品设置：        </p><p>一等奖：三星65英寸曲面UHD智能3D电视UA65HU8800  1台        </p>             <p>二等奖：夏普60英寸四色智能3D电视60LX960A  1台        </p>          <p>三等奖：先锋58英寸4K超高清智能3D电视58U600D  1台       </p>                 <p>参与奖：价值30元的苏宁彩电券                  </p>        <br />               <p style='margin-top:0px;'>活动须知：        </p>        <p>1、凡是参与游戏的用户，都将获得30元苏宁彩电优惠券，玩家将游戏得分分享至朋友圈后，可凭分享记录在2014年8月29日-31日期间到苏宁全国各门店或登录苏宁易购网站使用【注：登陆苏宁易购输入30元券号（02041020829 ）活动期间一个账户限使用一张30元彩电券，限购自营商品（特价、抢团、大聚惠、闪拍商品不参加），可与其他优惠同时参加】 。        </p>              <p>2、2014年8月31日24点之前，玩家将游戏得分分享至朋友圈内，系统将记录玩家得分至排行榜。排行榜前三名的用户将分别获得一二三等奖（若得分相同，按系统中分享时间靠前的排序）。最终获奖名单将在苏宁云商彩电影音官方微信（SNYGCDYY）进行公示。       </p>        <br /><center><span style='color:black;'>联众互动提供技术支持</span></center>    </div>				
+				</div>
+			</div>
+		</div>
+		<a id="closeBtn" class="closeBtn">
+			<img src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/icon-close.png">
+		</a>
+		<!-- 分享 -->
+		<div id="shareDiv" class="shareDiv" style="display:none;">
+			<img src="http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.png">
+		</div>
+		<!-- 排行榜 -->
+		<div id="chartsDiv" class="chartsDiv" style="display:none;">
+			<div class="items">
+				<div id="moveDiv" class="moveDiv" style="margin-top:0px;">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+
+	var queryCountdown = false;
+
+	function showChartsDiv(){
+		$chartsDiv.show();
+		$maskDiv.show();
+		$maskDiv.bind('ciick', function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			var elem = event.target || event.srcElement;
+			while(elem){
+				if(elem.id && elem.id == 'chartsDiv'){
+					return;
+				}
+				elem = elem.parentNode;
+			}
+			$chartsDiv.hide();
+			$maskDiv.hide();
+			$maskDiv.unbind('click');
+		});
+	}
+
+	//获取中奖信息
+	function getInfoDivFun(scr_m){
+		G_score=scr_m;
+		if(isGameOver){
+			 $.post( 'http://ddd.i-lz.cn/jkUEs4K2ThkZoNjI/game/score',{score:scr_m},function(msg){
+				 	if(msg.bai){
+					 	//$('#bbnum span').text((msg.bai*100).toFixed(1)+'%');
+					 	var ss=(msg.ranking/msg.count)*100;
+					 	$('#bbnum span').text(ss.toString().substr(0,ss.toString().indexOf(".")+2)+'%');
+					 	
+					 }
+					$('#distance').show();
+					$('#distance span').text(msg.lmi+'米');
+						
+	    	   },
+	           "json"
+	   		 );
+			isGameOver = false;
+		}
+		
+		
+	}
+
+	//排行榜fun
+	function showChartsFun(){
+		if(!queryCountdown){
+			queryCountdown = true;
+			 $.get( 'http://ddd.i-lz.cn/jkUEs4K2ThkZoNjI/game/getlist',function(msg){
+				 //$('#chartsDiv').html('').append(msg);
+				 $chartsDiv.find('div#moveDiv').html('').append(msg);
+				 showChartsDiv();
+				 var iChartsDivMoveNum = parseInt($chartsDiv.find('div#moveDiv').height()) - parseInt($chartsDiv.height()) * 0.81;
+					if(iChartsDivMoveNum > 0){
+						slideFun('chartsDiv', 'moveDiv', iChartsDivMoveNum, 'up');
+					}
+				
+	    	   },
+	           "text"
+	   		 );
+			
+		}else{
+			showChartsDiv();
+		}
+	}
+	//最高分更新fun
+	function saveBastHeightFun(bastHeigth){
+		
+		
+		
+	}
+	var dataForWeixin = {
+            appId: "",//微信公众号ID
+            MsgImg: 'http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.jpg', //分享给朋友和收藏时显示的缩略图       
+            TLImg: 'http://ddd.i-lz.cn/addons/ddd/themes/defualt/images/share.jpg', //分享到朋友圈时显示的缩略图
+            url: "http://ddd.i-lz.cn/jkUEs4K2ThkZoNjI/game/index",//分享地址
+            title:'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~', //分享至微博、朋友圈、朋友都会用到
+            desc: '太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~', //分享给 朋友时会用到
+            fakeid: "",
+            callback: function () {
+               // alert("分享成功！");
+            }
+        }; 
+        
+                   
+               var onBridgeReady=function(){           
+               //分享给朋友 
+               WeixinJSBridge.on('menu:share:appmessage', function(argv){            
+                  WeixinJSBridge.invoke('sendAppMessage',{            
+                     "appid":dataForWeixin.appId,            
+                     "img_url":dataForWeixin.MsgImg,            
+                     "img_width":"120",            
+                     "img_height":"120",            
+                     "link":dataForWeixin.url,            
+                     "desc":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~',            
+                     "title":'太坑爹了，才跳了'+
+aff
+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~'            
+                  }, function(res){(dataForWeixin.callback)();});            
+               });    
+               //分享至朋友圈        
+               WeixinJSBridge.on('menu:share:timeline', function(argv){            
+                  (dataForWeixin.callback)();            
+                  WeixinJSBridge.invoke('shareTimeline',{            
+                     "img_url":dataForWeixin.TLImg,            
+                     "img_width":"120",            
+                     "img_height":"120",            
+                     "link":dataForWeixin.url,            
+                     "desc":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~',            
+                     "title":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~'            
+                  }, function(res){});            
+               });       
+               //分享至微薄     
+               WeixinJSBridge.on('menu:share:weibo', function(argv){            
+                  WeixinJSBridge.invoke('shareWeibo',{            
+                     "content":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~',            
+                     "url":dataForWeixin.url            
+                  }, function(res){(dataForWeixin.callback)();});            
+               });      
+               //分享到facebook      
+               WeixinJSBridge.on('menu:share:facebook', function(argv){            
+                  (dataForWeixin.callback)();            
+                  WeixinJSBridge.invoke('shareFB',{            
+                     "img_url":dataForWeixin.TLImg,            
+                     "img_width":"120",            
+                     "img_height":"120",            
+                     "link":dataForWeixin.url,            
+                     "desc":dataForWeixin.desc,            
+                     "title":'太坑爹了，才跳了'+G_score+'米，差一点就得到彩电大奖了！小伙伴们都来试试吧~'            
+                  }, function(res){});            
+               });            
+            };            
+                if(document.addEventListener){            
+                   document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);            
+                }else if(document.attachEvent){            
+                   document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);            
+                   document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);            
+                }
+          
+
+
+	
+	</script>
+	
+</body>
+</html>
+0
+
