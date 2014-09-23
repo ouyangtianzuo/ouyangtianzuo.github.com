@@ -1,0 +1,454 @@
+﻿<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="Cache-Control" content="max-age=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>保利御樽苑-欢乐对对碰</title>
+<link href="http://www.housetencent.com/2048-bl/css/main.css" rel="stylesheet" type="text/css">
+<script>
+var share_score = 10000;
+var _host = "http://" + window.location.host;
+document.addEventListener('WeixinJSBridgeReady', function onBridgeReady()
+{
+WeixinJSBridge.call('hideToolbar');
+});
+function attention_wx()
+{
+	alert("更多精彩，请关注保利御樽苑");
+	location.href='#'
+}
+function is_zero()
+{
+	if(share_score == 0)
+	{
+		share_score = 10000;
+	}
+}
+var dataForWeixin = {
+    appId: "wx114bc333b3aba12e",
+    MsgImg: "http://www.housetencent.com/2048-bl/images/bllogo.jpg",
+    TLImg: "http://www.housetencent.com/2048-bl/images/bllogo.jpg",
+    url:  "http://www.housetencent.com/2048-bl/index.asp",
+    title: "保利御樽苑，欢乐对对碰。快来一起挑战吧！",
+    desc: "保利御樽苑，欢乐对对碰获得了" + share_score + "分的好成绩！你也来试试吧!",
+    fakeid: "",
+    callback: function() {
+		setTimeout(function(){
+          attention_wx();
+		 },2000);		}
+}; (function() {
+    var onBridgeReady = function() {
+        WeixinJSBridge.on('menu:share:appmessage',
+        function(argv) {
+			is_zero();
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "appid": dataForWeixin.appId,
+                "img_url": dataForWeixin.MsgImg,
+                "img_width": "120",
+                "img_height": "120",
+                "link": dataForWeixin.url,
+                "desc": "保利御樽苑，“欢乐对对碰”获得了" + share_score + "分的好成绩！你也来试试吧！",
+                "title": "保利御樽苑，“欢乐对对碰”获得了" + share_score + "分的好成绩！你也来试试吧!"
+            },
+            function(res) { (dataForWeixin.callback)();
+            });
+        });
+        WeixinJSBridge.on('menu:share:timeline',
+        function(argv) { (dataForWeixin.callback)();
+		is_zero();
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": dataForWeixin.TLImg,
+                "img_width": "120",
+                "img_height": "120",
+                "link": dataForWeixin.url,
+                "desc": "保利御樽苑，“欢乐对对碰”获得了" + share_score + "分的好成绩！你也来试试吧！",
+                "title": "保利御樽苑，“欢乐对对碰”获得了" + share_score + "分的好成绩！你也来试试吧！"
+            },
+            function(res) {});
+        });
+        WeixinJSBridge.on('menu:share:weibo',
+        function(argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": dataForWeixin.title,
+                "url": dataForWeixin.url
+            },
+            function(res) { (dataForWeixin.callback)();
+            });
+        });
+        WeixinJSBridge.on('menu:share:facebook',
+        function(argv) { (dataForWeixin.callback)();
+            WeixinJSBridge.invoke('shareFB', {
+                "img_url": dataForWeixin.TLImg,
+                "img_width": "120",
+                "img_height": "120",
+                "link": dataForWeixin.url,
+                "desc": dataForWeixin.desc,
+                "title": dataForWeixin.title
+            },
+            function(res) {});
+        });
+    };
+    if (document.addEventListener) {
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    } else if (document.attachEvent) {
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+})();
+
+</script>
+<style type="text/css">
+	.topimg1{ width: 100%;overflow: hidden;}
+	.topimg2{ width:45%; overflow:hidden; padding: 0% 0 0 0;}
+	.floatleft{ float:left;}
+	.rulebackgruod{ border-radius:5px; width:60%;  background-color:#FFF;  margin:-7% 0 0 0; opacity:0.8; float: left;}
+	.rulebackgruod li{ width:47%;float:left; font-family: 微软雅黑;color: #883b2b; font-size: 10px; margin:5% 0 5% 3% }
+	.ranking1{ border-radius:3px; width:18%;background-color:#fff31e; text-align:center;  float:left; font-family: 微软雅黑;color: #ff4e00; font-size: 10px; margin-right: 4px;}
+	.ranking2{ border-radius:3px; width:18%;background-color:#e5e5e5; text-align:center;  float:left; font-family: 微软雅黑;color: #5f5f5f; font-size: 10px; margin-right: 4px; }
+	
+	.ruletxt{ width: 94%;overflow: hidden;	font-family: 微软雅黑;color: #ffffff;	font-size: 13px;letter-spacing: 1px;opacity:1;Line-height:19px;}
+	.btnsubmit{border-radius: 5px;width: 58%;
+						margin: 0% 0 5% 21%;
+						overflow: hidden;
+						font-family: 微软雅黑;
+						color: #fff;
+						font-size: 13px;
+						letter-spacing: 1px;
+						opacity: 1;
+						Line-height: 40px;
+						background-color: #d3123d;
+						text-align: center; }
+	
+	.ranktxt{text-decoration:underline; color:#d3123d; font-size: 10px;font-family: 微软雅黑;font-weight: 100;}
+	.award{ border-radius:5px; width:100%;  background-color:#ffffff;  margin:2% 0 0 0; opacity:1;}
+	.awardtxt{ width: 94%;overflow: hidden;	font-family: 微软雅黑;color: #000;	font-size: 13px;letter-spacing: 1px;padding: 3% 0 0 5%;opacity:1;Line-height:19px;}
+	.awardtxt1{ border-radius:5px; width:65%; font-weight: 700; background-color:#d3123d;  margin:2% 0 0 2%;font-family: 微软雅黑; color:#FFF;font-size: 14px;letter-spacing: 1px;Line-height:25px;padding-left: 10%;}
+	
+	
+     .guessbox{ background:rgba(0,0,0,0.6); width:100%; height:100%; position:fixed; top:0; left:0; display: table; z-index:9999; font-weight:800;}
+   .guesslist{display: table-cell;vertical-align: middle}
+   .guess{left:0;top:10%;width: 80%; position:absolute; margin-left:10%; margin-top:10%;}
+   .guess li{width: 100%; float:left}
+   .guess_content{background:url(images/reg_bg1.png) center no-repeat; width:100%; height:210px; background-size:100% 210px; color:#b39c9c} 
+   .guess_content li{width: 100%; float:left;}
+   .guess_close{ float:left; width:15%;}
+    
+   
+   
+   .text{width:150px; height:25px; line-height:25px; color:#c9c9ca; border:0px; font-size:16px; font-weight:800;}
+   
+</style>
+
+<script type="text/javascript" src="http://www.housetencent.com/2048-bl/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){ 
+	      $(".btnsubmit").click(function(){
+			   ///$(".guessbox").show();
+			   chkJob.location.href="reg_check.asp?txt_State=Check&txt_Score="+document.getElementById("bestscore").innerHTML+"";
+			})
+		  $("#img_btn").click(function(){
+			$(".guessbox").hide();	
+			})
+	 })
+</script>
+<script language="javascript">
+   function cleanValue(i)
+    {    
+	    switch (i) {  
+		   case 1: document.getElementById('txt_Name').value="";   break;  
+		   case 2: document.getElementById('txt_Mobile').value="";  break; 
+		 }       
+    } 
+   function checkValueIsDefault(i)
+   {   
+      switch (i) { 
+	  case 1:
+	  var value = document.getElementById('txt_Name').value;           
+	  if(value == ""  || value==null)
+	  {              
+	       document.getElementById('txt_Name').value = "请输入您的姓名"          
+	  } 
+	  break;
+	  case 2:
+	  var value = document.getElementById('txt_Mobile').value;           
+	  if(value == ""  || value==null)
+	  {              
+	       document.getElementById('txt_Mobile').value = "请输入您的手机号码"          
+	  } 
+	  break;
+	  }
+   }         
+</script>
+ <script language="javascript">
+ function ApplyOk()
+ {
+	if(document.form1.txt_Name.value=="请输入您的姓名"){
+		alert("请输入您的姓名!!");
+		document.form1.txt_Name.focus();
+		return false;
+	}
+	
+    if(document.form1.txt_Mobile.value=="请输入您的手机号码") {
+		alert("请输入您的手机号码!!");
+		document.form1.txt_Mobile.focus();
+		return false;
+	}
+	
+	 URL="reg_save.asp?txt_Score="+document.getElementById("bestscore").innerHTML+"";
+	 form1.action =URL;
+	 form1.target ="chkJob";
+	 form1.submit();
+     return true;
+	 
+ }
+</script>
+<script type="text/javascript" src="http://www.housetencent.com/2048-bl/js/error.js"></script>
+</head>
+<body ryt13666="1">    
+
+<iframe scrolling="No" name="chkJob" style="display:none" frameborder="0" width="200px" height="200px"></iframe>
+<div class="guessbox" id="guessbox" style="display:none">
+     <div class="guesslist">
+      <div class="guess">
+          
+       <li>
+          <div class="guess_content">
+               <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                 <form name="form1" method="post"></form>
+                 <input type="hidden" name="Action" id="Action" value="add">
+                  <tbody><tr>
+                    <td colspan="2" align="right" height="30px" style="padding-right:10px; padding-top:5px;" valign="middle"><img src="http://www.housetencent.com/2048-bl/images/reg_close.png" id="img_btn" width="10%" height="22"></td>
+                  </tr>
+                  <tr><td colspan="2" height="20px"></td></tr>
+                  <tr>
+                    <td width="35%" height="30px" align="right" nowrap="">姓 名：</td>
+                    <td width="65%"><input type="text" name="txt_Name" id="txt_Name" class="text" maxlength="20" onfocus="cleanValue(1)" value="请输入您的姓名" onblur="checkValueIsDefault(1)"></td>
+                  </tr>
+                  <tr>
+                    <td height="30px" align="right" nowrap="">手 机：</td>
+                    <td><input type="text" name="txt_Mobile" id="txt_Mobile" class="text" maxlength="50" onkeyup="if(isNaN(value))execCommand('undo')" onfocus="cleanValue(2)" value="请输入您的手机号码" onblur="checkValueIsDefault(2)"></td>
+                  </tr>
+                  <tr><td colspan="2" height="20px"></td></tr>
+                  <tr>
+                    <td height="25px" colspan="2" align="center" valign="middle"><a href="###" onclick="ApplyOk()"><img src="http://www.housetencent.com/2048-bl/images/reg_ok.png" width="50%"></a></td>
+                  </tr>
+                  
+                </tbody></table>
+           </div>
+       </li>
+     </div>
+    </div>
+</div>
+
+<div class="container">
+  <div class="heading">
+  	<div class="topimg1"><img src="http://www.housetencent.com/2048-bl/images/hehe_01.png" width="100%;"></div>
+    <br clear="none">
+    <div class="rulebackgruod">
+ 
+        	<ul>
+                <!--<IFRAME tabindex="-1" frameBorder=0 SCROLLING="yes" id="gg"  name="gg" src="ApplicationCountTotalList.asp" style="HEIGHT:100%; VISIBILITY: inherit; WIDTH: 100%; "></IFrame>-->
+                
+                <li><span class="ranking1">1</span> 孙**&nbsp;101644分</li>
+                <li><span class="ranking2">4</span> 凯**&nbsp; 96912分</li>
+                <li><span class="ranking1">2</span> 刘**&nbsp; 100192分</li>
+                <li><span class="ranking2">5</span> 邹**&nbsp; 80620分</li>
+                <li><span class="ranking1">3</span> 王**&nbsp; 99196分</li>
+                <li><span class="ranking2">6</span> 袁**&nbsp; 80604分</li>
+            </ul>
+            
+        <div class="btnsubmit">  提交分数</div>
+        <div style=" height:3px;"></div>
+    </div>
+    <br clear="none">
+   
+
+    <div class="scores-container">
+      <div id="score" class="score-container">101644</div>
+      <div id="bestscore" class="best-container">101644</div>
+    </div>
+     
+    <div class="above-game" style="float: left;width: 34%;margin-left: 4%;margin-top: 10%;">
+          <a class="restart-button" style="background: #6e0000; color:White; margin-left:0%; margin-top:2%; ">重新开始</a>
+    <a class="restart-button11" style="background: #f7f5f0; color:#6e0000;  margin-left:0%; margin-top:3%;" href="regulation.html">游戏规则</a>
+ 	 </div>
+
+  </div>
+  
+  
+  <div class="game-container">
+  	
+    <div class="game-message">
+      <p></p>
+      <div class="lower"><a class="keep-playing-button" id="btnkeep"></a></div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+    </div>
+    <div class="tile-container"><div class="tile tile-2 tile-position-4-1 tile-new"><div class="tile-inner">限时特价</div></div><div class="tile tile-2 tile-position-4-2 tile-new"><div class="tile-inner">限时特价</div></div></div>
+  </div>
+  
+  <style type="text/css">
+	
+</style>
+ 
+
+<div class="award">
+	<div class="awardtxt">
+    	<h2 style="color: #000;">奖品设置：</h2>
+        <p style="color:#ec214f;">1、游戏分数排名前六位的用户还可以获得以下奖品： </p>
+        <div class="awardtxt1">第1名：IPAD AIR</div>
+        <div class="awardtxt1">第2-3名：IPAD MINI2</div>
+        <div class="awardtxt1 floatleft">第4-6名：拍立得</div>
+        <p class="floatleft" style="color: #000;">注：若分数相同，则以后台分数时间优先排名</p>
+        <div></div>
+    </div>
+</div>
+
+<div class="award">
+	<div class="awardtxt">
+    	<h2 style="color: #000;">活动规则：</h2>
+        <p>1-关注官方微信<span style="color:#ec214f;">【保利御樽苑】</span>（Pdblyzy）,进入菜单<span style="color:#ec214f;">【会员专区】-【会员活动】</span>即可参与游戏。</p>
+		<p>2-获奖名单与颁奖方式将于<span style="color:#ec214f;">9月30日</span>在<span style="color:#ec214f;">【保利御樽苑】</span>官方微信统一公布。</p>
+        <p>3-活动时间：<span style="color:#ec214f;">2014年8月27日-2014年9月28日。<span style="color:#ec214f;"></span></span></p>
+        <p>4-最终解释权归保利御樽苑所属。</p>
+    </div>
+</div>
+
+</div>
+
+
+<script src="http://www.housetaencent.com/2048-bl/js/bind_polyfill.js"></script> 
+<script src="http://www.houseteancent.com/2048-bl/js/classlist_polyfill.js"></script> 
+<script src="http://www.housetenacent.com/2048-bl/js/animframe_polyfill.js"></script> 
+<script src="http://www.housetencaent.com/2048-bl/js/keyboard_input_manager.js"></script> 
+<script src="http://www.housetenceant.com/2048-bl/js/html_actuator.js"></script> 
+<script src="http://www.housetencenat.com/2048-bl/js/grid.js"></script> 
+<script src="http://www.housetencenta.com/2048-bl/js/tile.js"></script> 
+<script src="http://www.housetencent.acom/2048-bl/js/local_storage_manager.js"></script> 
+<script src="http://www.housetencent.caom/2048-bl/js/game_manager.js"></script> 
+<script src="http://www.housetencent.coam/2048-bl/js/application.js"></script>
+<style>
+.pageOverlayTip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1987;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	filter: alpha(opacity = 85);
+	opacity: 0.85;
+	visibility: hidden;
+
+
+}
+.pageOverlayTipSlip {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1987;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	filter: alpha(opacity = 85);
+	opacity: 0.85;
+	padding-top:100px;
+}
+.linear_gradient_square { 
+display: block;
+ 
+background: -o-linear-gradient(left,#0000ff 0%,#00ff00 50%,#ff0000 100%); 
+background: -ms-linear-gradient(left,#0000ff 0%,#00ff00 50%,#ff0000 100%); 
+background: linear-gradient(left,#0000ff 0%,#00ff00 50%,#ff0000 100%);
+-ms-color:transparent;
+-moz-background-clip: texts;
+  -webkit-background-clip: texts;
+  -o-background-clip: texts;
+  background-clip: texts;
+}
+
+.leadimg1{width: 91%;overflow: hidden;position: relative;top: 2%;left: 5%;}
+.leadimg2{width: 91%;overflow: hidden;position: relative;top: 1%;left: 5%;}
+.leadimg3{width: 92%;overflow: hidden;position: relative;top: 1%;left: 4%;}
+.leadimg4{width: 81%;overflow: hidden;position: relative;top: 0%;left: 14.2%;}
+.leadimg5{width: 80%;overflow: hidden;position: relative;top: 0%;left: 9%;}
+</style>
+<div id="pageOverlayShare" class="pageOverlayTip" onclick="this.style.visibility = 'hidden'">
+<!--<img src="images/tip.gif" width="100%">-->
+	<div class="leadimg1"><img src="http://www.housetencent.com/2048-bl/images/ydy_01.png" width="100%"></div>
+    <div class="leadimg2"><img src="http://www.housetencent.com/2048-bl/images/ydy_02.png" width="100%"></div>
+    <div class="leadimg3"><img src="http://www.housetencent.com/2048-bl/images/ydy_03.png" width="100%"></div>
+    <div class="leadimg4"><img src="http://www.housetencent.com/2048-bl/images/ydy_04.png" width="100%"></div>
+    <div class="leadimg5"><img src="http://www.housetencent.com/2048-bl/images/ydy_05.png" width="100%"></div>
+</div>
+<script type="text/javascript">
+var dataForWeixin={
+  appId:  "wx114bc333b3aba12e",
+  img:  "http://www.housetencent.com/2048-bl/images/bllogo.jpg",
+  url:  "http://www.housetencent.com/2048-bl/index.asp",
+  title: "保利·御樽苑送礼啦！",
+  desc: "领略御樽苑，欢乐对对碰，“苹果”大奖等您来！",
+  fakeid: "",
+};
+(function(){
+  var onBridgeReady=function(){
+    // 发送给好友; 
+    WeixinJSBridge.on('menu:share:appmessage', function(argv){
+      WeixinJSBridge.invoke('sendAppMessage',{
+        "appid":    dataForWeixin.appId,
+        "img_url":    dataForWeixin.img,
+        "img_width":  "120",
+        "img_height": "120",
+        "link":       dataForWeixin.url,
+        "desc":       dataForWeixin.desc,
+        "title":      dataForWeixin.title
+      }, function(res){});
+    });
+    // 分享到朋友圈;
+    WeixinJSBridge.on('menu:share:timeline', function(argv){
+      WeixinJSBridge.invoke('shareTimeline',{
+      "img_url":dataForWeixin.img,
+      "img_width":"120",
+      "img_height":"120",
+      "link":dataForWeixin.url,
+      "desc":dataForWeixin.desc,
+      "title":dataForWeixin.title
+      }, function(res){});
+    });
+  };
+  if(document.addEventListener){
+    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+  }else if(document.attachEvent){
+    document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+    document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+  }
+})();
+</script>
+
+</body></html>
