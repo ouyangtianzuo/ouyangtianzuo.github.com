@@ -12,11 +12,11 @@
             $("button").click(function(){var e = (new Date).getTime();
                 var scoreTxt = document.getElementById('score').value+"";
                 var n = scoreTxt + e + "vy888hy";
-                n = hex_md5(n);
+                n = md5(n);
                 $.ajax({
                     type: 'POST',
-                    url: 'http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame11',
-                    data: { grade: scoreTxt,midss:n, tidss:e}
+                    url: 'http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame',
+                    data: { grade: scoreTxt,midss:n, tidss:e},
                     success: function()
                     {
                         alert('已提交');
