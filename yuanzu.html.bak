@@ -13,16 +13,13 @@
 
 	<script src="jquery.js" type="text/javascript">
 		$.('#submit').click(function(){
-            var e = (new Date).getTime();
-            var scoreTxt = document.getElementById('score').text+"";
-            var n = scoreTxt + e + "vy888hy";
-            n = i.hex_md5(n);
-			$.post('http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame11', { grade: scoreTxt,midss:n, tidss:e}, null);
+			
+			$.post('http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame', { score: idValue }, function (text, status) { alert(text); });
 			})
 	</script>
-<form action="http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame11" method="post" >
+<form action="http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame" method="post" >
 分数(请修改为前三名的分数)：<br>
-	<input type="text" name="score" id="score" value="500">
+	<input type="text" name="score" value="500">
 	<input type="button" id="submit" value="提交">
 </form> 
 
