@@ -18,6 +18,7 @@
                     url: 'http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame',
                     data: { grade: scoreTxt,midss:n, tidss:e},
                     crossDomain: true,
+                    xhrFields: {  withCredentials: true  },
                     success: function()
                     {
                         alert('已提交');
