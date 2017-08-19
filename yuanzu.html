@@ -16,18 +16,14 @@
                 $.ajax({
                     type: 'POST',
                     url: 'http://wap.i-h5.cn/ly_game/july_yuanzu/api.php?a=acgame11',
-                    data: { grade: scoreTxt,midss:n, tidss:e},
-                    beforeSend: function()
-                    {
-                        alert('Fetching....');
-                    },
+                    data: { grade: scoreTxt,midss:n, tidss:e}
                     success: function()
                     {
                         alert('已提交');
                     },
                     error: function()
                     {
-                        alert('Error');
+                        alert('错误');
                     }
                 });
             });
